@@ -15,14 +15,14 @@ const DateSelection = ({ onNext }: DateSelectionProps) => {
     currentBooking.date ? parseISO(currentBooking.date) : undefined
   );
 
-  // Get all available dates from ranges
   const isDateAvailable = (date: Date) => {
-    return availabilityRanges.some((range) =>
-      isWithinInterval(date, {
-        start: parseISO(range.startDate),
-        end: parseISO(range.endDate),
-      })
-    );
+    // return availabilityRanges.some((range) =>
+    //   isWithinInterval(date, {
+    //     start: parseISO(range.startDate),
+    //     end: parseISO(range.endDate),
+    //   })
+    // );
+      return true;
   };
 
   const handleDateSelect = (date: Date | undefined) => {

@@ -15,11 +15,12 @@ const TimeSelection = ({ onNext, onBack }: TimeSelectionProps) => {
 
   // Find the availability range for the selected date
   const selectedRange = availabilityRanges.find((range) => {
-    if (!currentBooking.date) return false;
-    const date = parseISO(currentBooking.date);
-    const start = parseISO(range.startDate);
-    const end = parseISO(range.endDate);
-    return date >= start && date <= end;
+    // if (!currentBooking.date) return false;
+    // const date = parseISO(currentBooking.date);
+    // const start = parseISO(range.startDate);
+    // const end = parseISO(range.endDate);
+    // return date >= start && date <= end;
+    return true;
   });
 
   // Get booked slots for the selected date
